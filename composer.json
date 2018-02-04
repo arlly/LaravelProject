@@ -17,6 +17,7 @@
         "league/flysystem-aws-s3-v3": "~1.0",
         "aws/aws-sdk-php": "~3.0",
         "phpmentors/domain-kata": "~1.5@dev",
+        "phpoffice/phpexcel": "~1.8.1",
         "prettus/l5-repository": "^2.6"
     },
     "require-dev": {
