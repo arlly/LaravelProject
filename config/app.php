@@ -177,6 +177,12 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        Prettus\Repository\Providers\RepositoryServiceProvider::class,
+
+        Collective\Html\HtmlServiceProvider::class,               // Laravel Collective
+        Intervention\Image\ImageServiceProvider::class,           // 画像処理パッケージ
+        Laracasts\Flash\FlashServiceProvider::class,              // フラッシュメッセージパッケージ
+
     ],
 
     /*
@@ -225,6 +231,11 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        'Form'      => Collective\Html\FormFacade::class,
+        'Html'      => Collective\Html\HtmlFacade::class,
+        'Image'     => Intervention\Image\Facades\Image::class,
+        'Flash'     => Laracasts\Flash\Flash::class,
 
     ],
 
