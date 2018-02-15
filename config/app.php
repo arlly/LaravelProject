@@ -182,6 +182,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,               // Laravel Collective
         Intervention\Image\ImageServiceProvider::class,           // 画像処理パッケージ
         Laracasts\Flash\FlashServiceProvider::class,              // フラッシュメッセージパッケージ
+        Barryvdh\Debugbar\ServiceProvider::class,
 
     ],
 
@@ -236,6 +237,7 @@ return [
         'Html'      => Collective\Html\HtmlFacade::class,
         'Image'     => Intervention\Image\Facades\Image::class,
         'Flash'     => Laracasts\Flash\Flash::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
 
     ],
 
