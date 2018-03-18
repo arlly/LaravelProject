@@ -110,4 +110,7 @@ return [
     |
     */
     'attributes' => [],
+
+    'hiragana' => ':attributeはひらがなで入力してください。',
+    'katakana' => ':attributeはカタカナで入力してください。',
 ];
