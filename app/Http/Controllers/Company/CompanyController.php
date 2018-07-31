@@ -9,7 +9,7 @@ class CompanyController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth:company');
+        $this->middleware(['auth:company']);
     }
 
     //
