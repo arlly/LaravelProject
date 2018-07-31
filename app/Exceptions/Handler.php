@@ -68,6 +68,10 @@ class Handler extends ExceptionHandler
             return redirect()->guest(route('admin.login'));
         }
 
+        if (in_array('company', $exception->guards(), true)) {
+            return redirect()->guest(route('company.login'));
+        }
+
         return redirect()->guest(route('login'));
     }
 
@@ -89,43 +93,43 @@ class Handler extends ExceptionHandler
     {
         switch ($status) {
             case 400:
-                $title = '400 Bad Request...';
+                $title = '400 Bad Request.';
                 break;
 
             case 401:
-                $title = '401 Unauthorized...';
+                $title = '401 Unauthorized.';
                 break;
 
             case 403:
-                $title = '403 Forbidden...';
+                $title = '403 Forbidden.';
                 break;
 
             case 404:
-                $title = '404 Not Found...';
+                $title = '404 Not Found.';
                 break;
 
             case 405:
-                $title = '405 Method Not Allowed...';
+                $title = '405 Method Not Allowed.';
                 break;
 
             case 408:
-                $title = '408 Request Timeout...';
+                $title = '408 Request Timeout.';
                 break;
 
             case 414:
-                $title = '414 URI Too Long...';
+                $title = '414 URI Too Long.';
                 break;
 
             case 500:
-                $title = '500 Internal Server Error...';
+                $title = '500 Internal Server Error.';
                 break;
 
             case 503:
-                $title = '503 Service Unavailable...';
+                $title = '503 Service Unavailable.';
                 break;
 
             default:
-                $title = 'Any Errors...';
+                $title = 'Any Errors.';
         }
 
         return $title;
@@ -173,7 +177,7 @@ class Handler extends ExceptionHandler
                 break;
 
             case 503:
-                $message = "申し訳ございませんが、ただ今メンテナンス中です...";
+                $message = "申し訳ございませんが、ただ今メンテナンス中です。";
                 break;
 
             default:
