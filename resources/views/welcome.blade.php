@@ -65,6 +65,33 @@
         </style>
     </head>
     <body>
+    <div id="app">
+        <example></example>
+    </div>
+    <div id="app-4">
+        <ol>
+            <li v-for="todo in todos">
+                @{{ todo.text }}
+            </li>
+        </ol>
+    </div>
+    <div id="app-6">
+        <p>@{{ message }}</p>
+        <input v-model="message">
+    </div>
+
+    <div id="app-7">
+        <ol>
+            <!--
+              各 todo-item の内容を表す todo オブジェクトを与えます。
+              これにより内容は動的に変化します。
+              また後述する "key" を各コンポーネントに提供する必要があります。
+            -->
+            <todo-item v-for="item in groceryList" v-bind:todo="item"></todo-item>
+        </ol>
+    </div>
+
+    <script src="js/app.js"></script>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">

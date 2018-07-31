@@ -6,18 +6,10 @@
                     <div class="panel-heading">Example Component</div>
 
                     <div class="panel-body">
-                        I'm an example component! by arlly
+                        <router-link  to="/about">About</router-link>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </template>
-
-<script>
-    export default {
-        mounted() {
-            console.log('Component mounted.')
-        }
-    }
-</script>

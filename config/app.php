@@ -77,7 +77,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'jp',
 
     /*
     |--------------------------------------------------------------------------
@@ -105,7 +105,7 @@ return [
 
     'key' => env('APP_KEY'),
 
-    'cipher' => 'AES-256-CBC',
+    'cipher' => 'AES-128-CBC',
 
     /*
     |--------------------------------------------------------------------------
@@ -176,9 +176,10 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\ValidatorServiceProvider::class,
+        App\Providers\AnnotationsServiceProvider::class,
 
         Prettus\Repository\Providers\RepositoryServiceProvider::class,
-
         Collective\Html\HtmlServiceProvider::class,               // Laravel Collective
         Intervention\Image\ImageServiceProvider::class,           // 画像処理パッケージ
         Laracasts\Flash\FlashServiceProvider::class,              // フラッシュメッセージパッケージ
